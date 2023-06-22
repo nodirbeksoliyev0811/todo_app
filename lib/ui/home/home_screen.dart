@@ -1,3 +1,4 @@
+import 'package:default_project/utils/colors.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -5,9 +6,18 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double height = MediaQuery.of(context).size.height;
-    double width = MediaQuery.of(context).size.width;
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          "Home Screen",
+          style: TextStyle(color: AppColors.white),
+        ),
+      ),
+      body: const Column(
+        children: [
+          Text(""),
+        ],
+      ),
+    );
   }
 }
-

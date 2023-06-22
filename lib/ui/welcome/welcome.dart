@@ -1,12 +1,24 @@
 import 'package:flutter/material.dart';
 
+import '../../utils/colors.dart';
+
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    double height = MediaQuery.of(context).size.height;
-    double width = MediaQuery.of(context).size.width;
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          "Welcome Screen",
+          style: TextStyle(color: AppColors.white),
+        ),
+      ),
+      body: const Column(
+        children: [
+          Text(""),
+        ],
+      ),
+    );
   }
 }
