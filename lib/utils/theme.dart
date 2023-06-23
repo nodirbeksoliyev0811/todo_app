@@ -5,12 +5,12 @@ import 'colors.dart';
 
 class AppTheme {
   static ThemeData darkTheme = ThemeData(
-    scaffoldBackgroundColor: AppColors.c273032,
+    scaffoldBackgroundColor: AppColors.C_121212,
     appBarTheme: const AppBarTheme(
       elevation: 0,
-      backgroundColor: AppColors.c273032,
+      backgroundColor: AppColors.C_121212,
       systemOverlayStyle: SystemUiOverlayStyle(
-        statusBarColor: AppColors.c273032,
+        statusBarColor: AppColors.C_121212,
         statusBarBrightness: Brightness.light,
         statusBarIconBrightness: Brightness.light,
       ),
@@ -81,7 +81,7 @@ class AppTheme {
           fontWeight: FontWeight.w500,
           fontFamily: "Poppins"),
       //body
-      bodySmall: TextStyle(
+      bodySmall: const TextStyle(
           color: AppColors.passiveTextColor,
           fontSize: 16,
           fontWeight: FontWeight.w500,
