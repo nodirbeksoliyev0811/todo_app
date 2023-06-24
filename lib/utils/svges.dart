@@ -16,7 +16,7 @@ class AppIcons{
   static const String ellipse = "assets/svg/ellipse.svg";
   static const String feedback = "assets/svg/feedback.svg";
   static const String flag = "assets/svg/flag.svg";
-  static const String focuse = "assets/svg/focuse.svg";
+  static const String focus = "assets/svg/focus.svg";
   static const String focusPassive = "assets/svg/focus_passive.svg";
   static const String google = "assets/svg/google.svg";
   static const String grocery = "assets/svg/grocery.svg";
@@ -31,6 +31,7 @@ class AppIcons{
   static const String music = "assets/svg/music.svg";
   static const String nextArrow = "assets/svg/next_arrow.svg";
   static const String profile = "assets/svg/profile.svg";
+  static const String profilePassive = "assets/svg/profile_passive.svg";
   static const String question = "assets/svg/question.svg";
   static const String repeat = "assets/svg/repeat.svg";
   static const String search = "assets/svg/search.svg";
