@@ -28,6 +28,7 @@ class AppColors{
   static const Color C_9741CC= Color(0xFF9741CC);
   static const Color C_CC4173= Color(0xFFCC4173);
   static const Color C_FF4949= Color(0xFFFF4949);
+  static const Color C_AFAFAF = Color(0xFFAFAFAF);
   static  Color textColor = const Color(0xFFFFFFFF).withOpacity(0.87);
   static const Color passiveTextColor =  Color(0xFFAFAFAF);
 }

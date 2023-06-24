@@ -26,7 +26,7 @@ class AppRoutes {
   static Route generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case RouteNames.homeScreen:
-        return MaterialPageRoute(builder: (context) => const HomeScreen());
+        return MaterialPageRoute(builder: (context) => HomeScreen());
       case RouteNames.loginScreen:
         return MaterialPageRoute(builder: (context) => const LoginScreen());
       case RouteNames.signScreen:
