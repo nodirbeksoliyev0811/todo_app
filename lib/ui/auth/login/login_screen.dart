@@ -64,6 +64,12 @@ class _LoginScreenState extends State<LoginScreen> {
               height: 52.h,
             ),
             GetTextField(
+              onChanged: (v){
+                setState(() {
+
+                });
+              },
+
               title: tr("username"),
               hintText: tr("enter_your_Username"),
               controller: _usernamecontroller,
@@ -72,6 +78,11 @@ class _LoginScreenState extends State<LoginScreen> {
               height: 26.h,
             ),
             GetTextField(
+              onChanged: (v){
+                setState(() {
+
+                });
+              },
               title: tr("password"),
               hintText: tr(
                 "enter_your_password",
@@ -82,17 +93,13 @@ class _LoginScreenState extends State<LoginScreen> {
             SizedBox(
               height: 70.h,
             ),
-            ZoomTapAnimation(
-              onTap: () {
-                setState(() {
-                  _init();
-                });
+            GetGlobalButton(
+              text: tr("login"),
+              onTap: (){
+                  Navigator.pushReplacementNamed(context, RouteNames.homeScreen);
               },
-              child: GetGlobalButton(
-                text: tr("login"),
-                username: _usernamecontroller.text.isNotEmpty,
-                password: _passwordcontroller.text.isNotEmpty,
-              ),
+              username: _usernamecontroller.text.isNotEmpty,
+              password: _passwordcontroller.text.isNotEmpty,
             ),
             SizedBox(
               height: 36.h,
@@ -138,9 +145,5 @@ class _LoginScreenState extends State<LoginScreen> {
         ),
       ),
     );
-  }
-
-  _saveBool(String key, bool value) async {
-    await StorageRepository.putBool(key, value);
   }
 }

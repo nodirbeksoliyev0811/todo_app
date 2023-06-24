@@ -1,4 +1,3 @@
-import 'package:default_project/local/storage_repository.dart';
 import 'package:default_project/ui/app_routes.dart';
 import 'package:default_project/ui/auth/widgets/global_button.dart';
 import 'package:default_project/ui/auth/widgets/global_login_with_button.dart';
@@ -21,10 +20,10 @@ class SignUpScreen extends StatefulWidget {
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
-
-  TextEditingController _usernamecontroller = TextEditingController();
-  TextEditingController _passwordcontroller = TextEditingController();
-  TextEditingController _confirmpasswordcontroller = TextEditingController();
+  final TextEditingController _usernamecontroller = TextEditingController();
+  final TextEditingController _passwordcontroller = TextEditingController();
+  final TextEditingController _confirmpasswordcontroller =
+      TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -53,6 +52,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   height: 23.h,
                 ),
                 GetTextField(
+                  onChanged: (v) {
+                    setState(() {});
+                  },
                   title: tr("username"),
                   hintText: tr("enter_your_Username"),
                   controller: _usernamecontroller,
@@ -61,6 +63,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   height: 26.h,
                 ),
                 GetTextField(
+                  onChanged: (v) {
+                    setState(() {});
+                  },
                   title: tr("password"),
                   hintText: tr(
                     "enter_your_password",
@@ -72,6 +77,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   height: 26.h,
                 ),
                 GetTextField(
+                  onChanged: (v) {
+                    setState(() {});
+                  },
                   title: tr("confirm_password"),
                   hintText: tr(
                     "confirm_your_password",
@@ -84,10 +92,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
                 ZoomTapAnimation(
                   onTap: () {
-                    setState(() {
-                    });
+                    setState(() {});
                   },
                   child: GetGlobalButton(
+                    onTap: () {
+                      Navigator.pushReplacementNamed(
+                          context, RouteNames.loginScreen);
+                    },
                     text: tr("register"),
                     username: _usernamecontroller.text.isNotEmpty,
                     password: _passwordcontroller.text.isNotEmpty,
@@ -107,18 +118,22 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
                 GetLoginWithButton(
                     text: tr("register_with_apple"), img: AppIcons.apple),
-                SizedBox(height: 26.h,),
+                SizedBox(
+                  height: 26.h,
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
                       tr("already_have_an_account?"),
                       style: Theme.of(context).textTheme.labelLarge!.copyWith(
-                          color: AppColors.C_979797, fontWeight: FontWeight.w400),
+                          color: AppColors.C_979797,
+                          fontWeight: FontWeight.w400),
                     ),
                     ZoomTapAnimation(
                       onTap: () {
-                        Navigator.pushReplacementNamed(context, RouteNames.loginScreen);
+                        Navigator.pushReplacementNamed(
+                            context, RouteNames.loginScreen);
                       },
                       child: Text(
                         tr("login"),
