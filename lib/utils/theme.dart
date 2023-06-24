@@ -21,81 +21,81 @@ class AppTheme {
           color: AppColors.textColor,
           fontSize: 57.sp,
           fontWeight: FontWeight.w800,
-          fontFamily: "Poppins"),
+          fontFamily: "Lato"),
       displayMedium: TextStyle(
           color: AppColors.textColor,
           fontSize: 45.sp,
           fontWeight: FontWeight.w700,
-          fontFamily: "Poppins"),
+          fontFamily: "Lato"),
       displaySmall: TextStyle(
           color: AppColors.textColor,
           fontSize: 36.sp,
           fontWeight: FontWeight.w600,
-          fontFamily: "Poppins"),
+          fontFamily: "Lato"),
       //headline
       headlineLarge: TextStyle(
           color: AppColors.textColor,
           fontSize: 32.sp,
           fontWeight: FontWeight.w700,
-          fontFamily: "Poppins"),
+          fontFamily: "Lato"),
       headlineMedium: TextStyle(
           color: AppColors.textColor,
           fontSize: 28.sp,
           fontWeight: FontWeight.w500,
-          fontFamily: "Poppins"),
+          fontFamily: "Lato"),
       headlineSmall: TextStyle(
           color: AppColors.textColor,
           fontSize: 24.sp,
           fontWeight: FontWeight.w400,
-          fontFamily: "Poppins"),
+          fontFamily: "Lato"),
       //title
       titleLarge: TextStyle(
           color: AppColors.textColor,
           fontSize: 22.sp,
           fontWeight: FontWeight.w700,
-          fontFamily: "Poppins"),
+          fontFamily: "Lato"),
       titleMedium: TextStyle(
           color: AppColors.textColor,
           fontSize: 16.sp,
           fontWeight: FontWeight.w600,
-          fontFamily: "Poppins"),
+          fontFamily: "Lato"),
       titleSmall: TextStyle(
           color: AppColors.textColor,
           fontSize: 14.sp,
           fontWeight: FontWeight.w500,
-          fontFamily: "Poppins"),
+          fontFamily: "Lato"),
       //label
       labelLarge: TextStyle(
           color: AppColors.textColor,
           fontSize: 14.sp,
           fontWeight: FontWeight.w600,
-          fontFamily: "Poppins"),
+          fontFamily: "Lato"),
       labelMedium: TextStyle(
           color: AppColors.textColor,
           fontSize: 12.sp,
           fontWeight: FontWeight.w500,
-          fontFamily: "Poppins"),
+          fontFamily: "Lato"),
       labelSmall: TextStyle(
           color: AppColors.textColor,
           fontSize: 11.sp,
           fontWeight: FontWeight.w500,
-          fontFamily: "Poppins"),
+          fontFamily: "Lato"),
       //body
       bodySmall: const TextStyle(
           color: AppColors.passiveTextColor,
           fontSize: 16,
           fontWeight: FontWeight.w500,
-          fontFamily: "Poppins"),
+          fontFamily: "Lato"),
       bodyMedium: TextStyle(
           color: AppColors.textColor,
           fontSize: 14.sp,
           fontWeight: FontWeight.w500,
-          fontFamily: "Poppins"),
+          fontFamily: "Lato"),
       bodyLarge: TextStyle(
           color: AppColors.textColor,
           fontSize: 12.sp,
           fontWeight: FontWeight.w500,
-          fontFamily: "Poppins"),
+          fontFamily: "Lato"),
     ),
   );
   static ThemeData lightTheme = ThemeData();

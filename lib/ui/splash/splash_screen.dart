@@ -15,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
     await Future.delayed(
       const Duration(seconds: 2),
       () {
-        Navigator.pushReplacementNamed(context, RouteNames.splashScreen);
+        Navigator.pushReplacementNamed(context, RouteNames.loginScreen);
       },
     );
   }

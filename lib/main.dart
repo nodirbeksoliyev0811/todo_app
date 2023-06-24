@@ -13,7 +13,7 @@ Future<void>main()async{
       Locale('uz', 'UZ'),
       Locale('ru', 'RU'),
     ],
-    fallbackLocale: const Locale('uz','UZ'),
+    fallbackLocale: const Locale('en','EN'),
     path: 'assets/translations',
     child: const MyApp(),  ) );
 }
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.darkTheme,
-          themeMode: ThemeMode.light,
+          themeMode: ThemeMode.dark,
           localizationsDelegates: context.localizationDelegates,
           supportedLocales: context.supportedLocales,
           locale: context.locale,

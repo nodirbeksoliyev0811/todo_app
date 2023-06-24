@@ -5,6 +5,7 @@ class AppColors{
   static const Color black = Color(0xFF000000);
   static const Color C_121212 = Color(0xFF121212);
   static const Color C_8875FF = Color(0xFF8875FF);
+  static const Color C_8687E7 = Color(0xFF8687E7);
   static const Color C_979797 = Color(0xFF979797);
   static const Color C_1D1D1D = Color(0xFF1D1D1D);
   static const Color C_363636 = Color(0xFF363636);
@@ -28,6 +29,7 @@ class AppColors{
   static const Color C_9741CC= Color(0xFF9741CC);
   static const Color C_CC4173= Color(0xFFCC4173);
   static const Color C_FF4949= Color(0xFFFF4949);
+  static const Color C_535353= Color(0xFF535353);
   static  Color textColor = const Color(0xFFFFFFFF).withOpacity(0.87);
   static const Color passiveTextColor =  Color(0xFFAFAFAF);
 }
