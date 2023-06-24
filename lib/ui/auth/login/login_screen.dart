@@ -96,7 +96,7 @@ class _LoginScreenState extends State<LoginScreen> {
             GetGlobalButton(
               text: tr("login"),
               onTap: (){
-                  Navigator.pushReplacementNamed(context, RouteNames.homeScreen);
+                  Navigator.pushReplacementNamed(context, RouteNames.tabBoxScreen);
               },
               username: _usernamecontroller.text.isNotEmpty,
               password: _passwordcontroller.text.isNotEmpty,
