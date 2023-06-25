@@ -29,9 +29,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {},
-          icon: SvgPicture.asset(AppIcons.backArrow),
+        leading: ZoomTapAnimation(
+          onTap: () {
+            Navigator.pushReplacementNamed(context, RouteNames.onBoardingScreen);
+          },
+          child: Padding(
+            padding: EdgeInsets.all(15.sp),
+            child: SvgPicture.asset(AppIcons.backArrow),
+          ),
         ),
       ),
       body: Padding(

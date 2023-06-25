@@ -12,25 +12,27 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          ListTile(
-            leading: ZoomTapAnimation(onTap: (){},child: SvgPicture.asset(AppIcons.sort)),
-            title: const Center(
-              child: Text(
-                "Home Page",
-                style: TextStyle(color: AppColors.white),
-              ),
-            ),
-            trailing: Padding(
-              padding: EdgeInsets.only(top: 13.h),
-              child: ZoomTapAnimation(
-                  onTap: () {},
-                  child: Image.asset(AppImages.profileImg,
-                      height: 42.h, width: 42.h)),
+      appBar: AppBar(
+        title: ListTile(
+          leading: ZoomTapAnimation(
+              onTap: () {}, child: SvgPicture.asset(AppIcons.sort)),
+          title: const Center(
+            child: Text(
+              "Home Page",
+              style: TextStyle(color: AppColors.white),
             ),
           ),
-        ],
+          trailing: Padding(
+            padding: EdgeInsets.only(top: 13.h),
+            child: ZoomTapAnimation(
+                onTap: () {},
+                child: Image.asset(AppImages.profileImg,
+                    height: 42.h, width: 42.h)),
+          ),
+        ),
+      ),
+      body: const Column(
+        children: [],
       ),
     );
   }
