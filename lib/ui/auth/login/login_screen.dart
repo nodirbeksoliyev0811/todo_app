@@ -43,9 +43,14 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {},
-          icon: SvgPicture.asset(AppIcons.backArrow),
+        leading: ZoomTapAnimation(
+          onTap: () {
+            Navigator.pushReplacementNamed(context, RouteNames.onBoardingScreen);
+          },
+          child: Padding(
+            padding: EdgeInsets.all(15.sp),
+            child: SvgPicture.asset(AppIcons.backArrow),
+          ),
         ),
       ),
       body: Padding(

@@ -17,8 +17,8 @@ class RouteNames {
   static const String profileScreen = "/profile";
   static const String settingsScreen = "/settings";
   static const String taskScreen = "/task";
-  static const String tabBoxScreen = "/";
-  static const String splashScreen = "/tabBox";
+  static const String tabBoxScreen = "/tabBox";
+  static const String splashScreen = "/";
 }
 
 class AppRoutes {
