@@ -32,16 +32,19 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       appBar: AppBar(
         backgroundColor: AppColors.C_121212,
         elevation: 0,
-        title: ZoomTapAnimation(
-          onTap: () {
-            Navigator.pushReplacementNamed(context, RouteNames.loginScreen);
-          },
-          child: Text(
-            tr("skip"),
-            style: TextStyle(
-              fontFamily: "Lato",
-              fontSize: 16.sp,
-              color: Colors.white.withOpacity(0.4),
+        title: Padding(
+          padding: EdgeInsets.only(left: 10.w,top: 20.h),
+          child: ZoomTapAnimation(
+            onTap: () {
+              Navigator.pushReplacementNamed(context, RouteNames.loginScreen);
+            },
+            child: Text(
+              tr("skip"),
+              style: TextStyle(
+                fontFamily: "Lato",
+                fontSize: 16.sp,
+                color: Colors.white.withOpacity(0.4),
+              ),
             ),
           ),
         ),
@@ -63,16 +66,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     Image.asset(AppImages.onBoarding1,
                         height: 277.78.sp, width: 213.w),
                     SizedBox(height: 51.22.h),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SvgPicture.asset(AppIcons.rec),
-                        SizedBox(width: 2.w),
-                        SvgPicture.asset(AppIcons.recPassive),
-                        SizedBox(width: 2.w),
-                        SvgPicture.asset(AppIcons.recPassive),
-                      ],
-                    ),
+
                     SizedBox(height: 50.h),
                     Text(
                       tr("manage_your_tasks"),
@@ -214,7 +208,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     ),
                     child: Center(
                       child: Text(
-                        tr("back"),
+                        pageIndex!=0?tr("back"):"",
                         style: TextStyle(
                           fontFamily: "Lato",
                           fontSize: 16.sp,
