@@ -8,9 +8,11 @@ class FocusScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          "Focus Screen",
-          style: TextStyle(color: AppColors.white),
+        title: const Center(
+          child: Text(
+            "Focus Mode",
+            style: TextStyle(color: AppColors.white),
+          ),
         ),
       ),
       body: const Column(
