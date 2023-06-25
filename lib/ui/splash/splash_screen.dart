@@ -35,7 +35,7 @@ class SplashScreen extends StatelessWidget {
     );
   }
   void _navigateToWelcomeScreen(BuildContext context) async{
-    Future.delayed(Duration(seconds: 3),(){
+    Future.delayed(const Duration(seconds: 3),(){
       Navigator.pushReplacementNamed(context, RouteNames.onBoardingScreen);
     });
   }
