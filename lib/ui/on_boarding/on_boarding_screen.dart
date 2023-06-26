@@ -1,5 +1,6 @@
 import 'package:default_project/ui/app_routes.dart';
 import 'package:default_project/ui/on_boarding/wdigets/pageview_items.dart';
+import 'package:default_project/utils/images.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -67,9 +68,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   physics: const AlwaysScrollableScrollPhysics(),
                   scrollDirection: Axis.horizontal,
                   children: [
-                    PageViewItems(title: tr("manage_your_tasks"), text: tr("on_boarding_text1")),
-                    PageViewItems(title:tr("create_daily_routine"), text: tr("on_boarding_text2")),
-                    PageViewItems(title: tr("organize_your_tasks"), text: tr("on_boarding_text3")),
+                    PageViewItems(title: tr("manage_your_tasks"), text: tr("on_boarding_text1"), img: AppImages.onBoarding1,),
+                    PageViewItems(title:tr("create_daily_routine"), text: tr("on_boarding_text2"),img: AppImages.onBoarding2,),
+                    PageViewItems(title: tr("organize_your_tasks"), text: tr("on_boarding_text3"),img: AppImages.onBoarding3,),
                   ],
                 ),
                 Row(
