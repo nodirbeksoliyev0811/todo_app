@@ -1,4 +1,3 @@
-import 'package:default_project/local/storage_repository.dart';
 import 'package:default_project/ui/app_routes.dart';
 import 'package:default_project/ui/auth/widgets/global_button.dart';
 import 'package:default_project/ui/auth/widgets/global_login_with_button.dart';
@@ -21,120 +20,143 @@ class SignUpScreen extends StatefulWidget {
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
-
-  TextEditingController _usernamecontroller = TextEditingController();
-  TextEditingController _passwordcontroller = TextEditingController();
-  TextEditingController _confirmpasswordcontroller = TextEditingController();
+  final TextEditingController _usernamecontroller = TextEditingController();
+  final TextEditingController _passwordcontroller = TextEditingController();
+  final TextEditingController _confirmpasswordcontroller =
+      TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {},
-          icon: SvgPicture.asset(AppIcons.backArrow),
+        leading: ZoomTapAnimation(
+          onTap: () {
+            Navigator.pushReplacementNamed(context, RouteNames.loginScreen);
+          },
+          child: Padding(
+            padding: EdgeInsets.all(15.sp),
+            child: SvgPicture.asset(AppIcons.backArrow),
+          ),
         ),
       ),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.w),
         child: Expanded(
-          child: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(
-                  height: 16.h,
-                ),
-                Text(
-                  tr("register"),
-                  style: Theme.of(context).textTheme.headlineLarge,
-                ),
-                SizedBox(
-                  height: 23.h,
-                ),
-                GetTextField(
-                  title: tr("username"),
-                  hintText: tr("enter_your_Username"),
-                  controller: _usernamecontroller,
-                ),
-                SizedBox(
-                  height: 26.h,
-                ),
-                GetTextField(
-                  title: tr("password"),
-                  hintText: tr(
-                    "enter_your_password",
-                  ),
-                  isPassword: true,
-                  controller: _passwordcontroller,
-                ),
-                SizedBox(
-                  height: 26.h,
-                ),
-                GetTextField(
-                  title: tr("confirm_password"),
-                  hintText: tr(
-                    "confirm_your_password",
-                  ),
-                  isPassword: true,
-                  controller: _confirmpasswordcontroller,
-                ),
-                SizedBox(
-                  height: 40.h,
-                ),
-                ZoomTapAnimation(
-                  onTap: () {
-                    setState(() {
-                    });
-                  },
-                  child: GetGlobalButton(
-                    text: tr("register"),
-                    username: _usernamecontroller.text.isNotEmpty,
-                    password: _passwordcontroller.text.isNotEmpty,
-                  ),
-                ),
-                SizedBox(
-                  height: 36.h,
-                ),
-                const GetOr(),
-                SizedBox(
-                  height: 30.h,
-                ),
-                GetLoginWithButton(
-                    text: tr("register_with_google"), img: AppIcons.google),
-                SizedBox(
-                  height: 20.h,
-                ),
-                GetLoginWithButton(
-                    text: tr("register_with_apple"), img: AppIcons.apple),
-                SizedBox(height: 26.h,),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+          child: Column(
+            children: [
+              SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    SizedBox(
+                      height: 16.h,
+                    ),
                     Text(
-                      tr("already_have_an_account?"),
-                      style: Theme.of(context).textTheme.labelLarge!.copyWith(
-                          color: AppColors.C_979797, fontWeight: FontWeight.w400),
+                      tr("register"),
+                      style: Theme.of(context).textTheme.headlineLarge,
+                    ),
+                    SizedBox(
+                      height: 23.h,
+                    ),
+                    GetTextField(
+                      onChanged: (v) {
+                        setState(() {});
+                      },
+                      title: tr("username"),
+                      hintText: tr("enter_your_Username"),
+                      controller: _usernamecontroller,
+                    ),
+                    SizedBox(
+                      height: 26.h,
+                    ),
+                    GetTextField(
+                      onChanged: (v) {
+                        setState(() {});
+                      },
+                      title: tr("password"),
+                      hintText: tr(
+                        "enter_your_password",
+                      ),
+                      isPassword: true,
+                      controller: _passwordcontroller,
+                    ),
+                    SizedBox(
+                      height: 26.h,
+                    ),
+                    GetTextField(
+                      onChanged: (v) {
+                        setState(() {});
+                      },
+                      title: tr("confirm_password"),
+                      hintText: tr(
+                        "confirm_your_password",
+                      ),
+                      isPassword: true,
+                      controller: _confirmpasswordcontroller,
+                    ),
+                    SizedBox(
+                      height: 40.h,
                     ),
                     ZoomTapAnimation(
                       onTap: () {
-                        Navigator.pushReplacementNamed(context, RouteNames.loginScreen);
+                        setState(() {});
                       },
-                      child: Text(
-                        tr("login"),
-                        style: Theme.of(context)
-                            .textTheme
-                            .labelLarge!
-                            .copyWith(fontWeight: FontWeight.w500),
+                      child: GetGlobalButton(
+                        onTap: () {
+                          Navigator.pushReplacementNamed(
+                              context, RouteNames.loginScreen);
+                        },
+                        text: tr("register"),
+                        username: _usernamecontroller.text.isNotEmpty,
+                        password: _passwordcontroller.text.isNotEmpty,
                       ),
-                    )
+                    ),
+                    SizedBox(
+                      height: 36.h,
+                    ),
+                    const GetOr(),
+                    SizedBox(
+                      height: 30.h,
+                    ),
+                    GetLoginWithButton(
+                        text: tr("register_with_google"), img: AppIcons.google),
+                    SizedBox(
+                      height: 20.h,
+                    ),
+                    GetLoginWithButton(
+                        text: tr("register_with_apple"), img: AppIcons.apple),
                   ],
                 ),
-                SizedBox(
-                  height: 16.h,
-                ),
-              ],
-            ),
+              ),
+              const Spacer(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    tr("already_have_an_account?"),
+                    style: Theme.of(context).textTheme.labelLarge!.copyWith(
+                        color: AppColors.C_979797,
+                        fontWeight: FontWeight.w400),
+                  ),
+                  ZoomTapAnimation(
+                    onTap: () {
+                      Navigator.pushReplacementNamed(
+                          context, RouteNames.loginScreen);
+                    },
+                    child: Text(
+                      tr("login"),
+                      style: Theme.of(context)
+                          .textTheme
+                          .labelLarge!
+                          .copyWith(fontWeight: FontWeight.w500),
+                    ),
+                  )
+                ],
+              ),
+              SizedBox(
+                height: 16.h,
+              ),
+            ],
           ),
         ),
       ),

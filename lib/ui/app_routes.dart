@@ -1,14 +1,13 @@
 import 'package:default_project/ui/auth/login/login_screen.dart';
 import 'package:default_project/ui/auth/sign/sign_up_screen.dart';
 import 'package:default_project/ui/on_boarding/on_boarding_screen.dart';
-import 'package:default_project/ui/profile/profile_screen.dart';
 import 'package:default_project/ui/settings/settings_screen.dart';
 import 'package:default_project/ui/splash/splash_screen.dart';
+import 'package:default_project/ui/tab_boxs/home/home_screen.dart';
+import 'package:default_project/ui/tab_boxs/profile/profile_screen.dart';
 import 'package:default_project/ui/tab_boxs/tab_box_screen.dart';
 import 'package:default_project/ui/tasks/task_screen.dart';
 import 'package:flutter/material.dart';
-
-import 'home/home_screen.dart';
 
 class RouteNames {
   static const String homeScreen = "/home";
