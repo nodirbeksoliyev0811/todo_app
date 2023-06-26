@@ -33,7 +33,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
         backgroundColor: AppColors.C_121212,
         elevation: 0,
         title: Padding(
-          padding: EdgeInsets.only(left: 10.w,top: 20.h),
+          padding: EdgeInsets.only(left: 10.w, top: 20.h),
           child: ZoomTapAnimation(
             onTap: () {
               Navigator.pushReplacementNamed(context, RouteNames.loginScreen);
@@ -53,126 +53,141 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
         children: [
           SizedBox(height: 2.h),
           Expanded(
-            child: PageView(
-              onPageChanged: (index) {
-                pageIndex = index;
-              },
-              controller: pageController,
-              physics: const BouncingScrollPhysics(),
-              scrollDirection: Axis.horizontal,
+            child: Stack(
+              alignment: Alignment.center,
               children: [
-                Column(
+                PageView(
+                  onPageChanged: (index) {
+                    pageIndex = index;
+                  },
+                  controller: pageController,
+                  physics: const AlwaysScrollableScrollPhysics(),
+                  scrollDirection: Axis.horizontal,
                   children: [
-                    Image.asset(AppImages.onBoarding1,
-                        height: 277.78.sp, width: 213.w),
-                    SizedBox(height: 51.22.h),
-
-                    SizedBox(height: 50.h),
-                    Text(
-                      tr("manage_your_tasks"),
-                      style: TextStyle(
-                        fontFamily: "Lato",
-                        fontSize: 32.sp,
-                        fontWeight: FontWeight.w700,
-                        color: Colors.white,
-                      ),
-                    ),
-                    SizedBox(height: 42.h),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 36.w),
-                      child: Text(
-                        tr("on_boarding_text1"),
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontFamily: "Lato",
-                          fontSize: 16.sp,
-                          fontWeight: FontWeight.w400,
-                          color: Colors.white.withOpacity(0.8),
+                    Column(
+                      children: [
+                        Image.asset(
+                          AppImages.onBoarding1,
+                          height: 277.78.sp,
+                          width: 213.w,
                         ),
-                      ),
+                        SizedBox(height: 101.22.h),
+                        Text(
+                          tr("manage_your_tasks"),
+                          style: TextStyle(
+                            fontFamily: "Lato",
+                            fontSize: 32.sp,
+                            fontWeight: FontWeight.w700,
+                            color: Colors.white,
+                          ),
+                        ),
+                        SizedBox(height: 42.h),
+                        Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 36.w),
+                          child: Text(
+                            tr("on_boarding_text1"),
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontFamily: "Lato",
+                              fontSize: 16.sp,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.white.withOpacity(0.8),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Image.asset(
+                          AppImages.onBoarding2,
+                          height: 277.78.sp,
+                          width: 213.w,
+                        ),
+                        SizedBox(height: 101.22.h),
+                        Text(
+                          tr("create_daily_routine"),
+                          style: TextStyle(
+                            fontFamily: "Lato",
+                            fontSize: 32.sp,
+                            fontWeight: FontWeight.w700,
+                            color: Colors.white,
+                          ),
+                        ),
+                        SizedBox(height: 42.h),
+                        Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 36.w),
+                          child: Text(
+                            tr("on_boarding_text2"),
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontFamily: "Lato",
+                              fontSize: 16.sp,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.white.withOpacity(0.8),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Image.asset(
+                          AppImages.onBoarding3,
+                          height: 277.78.sp,
+                          width: 213.w,
+                        ),
+                        SizedBox(height: 101.22.h),
+                        Text(
+                          tr("organize_your_tasks"),
+                          style: TextStyle(
+                            fontFamily: "Lato",
+                            fontSize: 32.sp,
+                            fontWeight: FontWeight.w700,
+                            color: Colors.white,
+                          ),
+                        ),
+                        SizedBox(height: 42.h),
+                        Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 36.w),
+                          child: Text(
+                            tr("on_boarding_text3"),
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontFamily: "Lato",
+                              fontSize: 16.sp,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.white.withOpacity(0.8),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
-                Column(
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Image.asset(AppImages.onBoarding2,
-                        height: 277.78.sp, width: 213.w),
-                    SizedBox(height: 51.22.h),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SvgPicture.asset(AppIcons.recPassive),
-                        SizedBox(width: 2.w),
-                        SvgPicture.asset(AppIcons.rec),
-                        SizedBox(width: 2.w),
-                        SvgPicture.asset(AppIcons.recPassive),
-                      ],
-                    ),
-                    SizedBox(height: 50.h),
-                    Text(
-                      tr("create_daily_routine"),
-                      style: TextStyle(
-                        fontFamily: "Lato",
-                        fontSize: 32.sp,
-                        fontWeight: FontWeight.w700,
-                        color: Colors.white,
-                      ),
-                    ),
-                    SizedBox(height: 42.h),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 36.w),
-                      child: Text(
-                        tr("on_boarding_text2"),
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontFamily: "Lato",
-                          fontSize: 16.sp,
-                          fontWeight: FontWeight.w400,
-                          color: Colors.white.withOpacity(0.8),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                Column(
-                  children: [
-                    Image.asset(AppImages.onBoarding3,
-                        height: 277.78.sp, width: 213.w),
-                    SizedBox(height: 51.22.h),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SvgPicture.asset(AppIcons.recPassive),
-                        SizedBox(width: 2.w),
-                        SvgPicture.asset(AppIcons.recPassive),
-                        SizedBox(width: 2.w),
-                        SvgPicture.asset(AppIcons.rec),
-                      ],
-                    ),
-                    SizedBox(height: 50.h),
-                    Text(
-                      tr("organize_your_tasks"),
-                      style: TextStyle(
-                        fontFamily: "Lato",
-                        fontSize: 32.sp,
-                        fontWeight: FontWeight.w700,
-                        color: Colors.white,
-                      ),
-                    ),
-                    SizedBox(height: 42.h),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 36.w),
-                      child: Text(
-                        tr("on_boarding_text3"),
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontFamily: "Lato",
-                          fontSize: 16.sp,
-                          fontWeight: FontWeight.w400,
-                          color: Colors.white.withOpacity(0.8),
-                        ),
-                      ),
-                    ),
+                    pageIndex == 0
+                        ? SvgPicture.asset(AppIcons.rec)
+                        : SvgPicture.asset(
+                            AppIcons.recPassive,
+                            color: Colors.white.withOpacity(0.2),
+                          ),
+                    SizedBox(width: 2.w),
+                    pageIndex == 1
+                        ? SvgPicture.asset(AppIcons.rec)
+                        : SvgPicture.asset(
+                            AppIcons.recPassive,
+                            color: Colors.white.withOpacity(0.2),
+                          ),
+                    SizedBox(width: 2.w),
+                    pageIndex == 2
+                        ? SvgPicture.asset(AppIcons.rec)
+                        : SvgPicture.asset(
+                            AppIcons.recPassive,
+                            color: Colors.white.withOpacity(0.2),
+                          ),
                   ],
                 ),
               ],
@@ -192,8 +207,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       setState(() {
                         pageController.animateToPage(
                           pageIndex,
-                          duration: const Duration(milliseconds: 240),
-                          curve: Curves.linear,
+                          duration: const Duration(seconds: 1),
+                          curve: Curves.bounceOut,
                         );
                       });
                     }
@@ -208,7 +223,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     ),
                     child: Center(
                       child: Text(
-                        pageIndex!=0?tr("back"):"",
+                        pageIndex != 0 ? tr("back") : "",
                         style: TextStyle(
                           fontFamily: "Lato",
                           fontSize: 16.sp,
@@ -226,8 +241,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       setState(() {
                         pageController.animateToPage(
                           pageIndex,
-                          duration: const Duration(milliseconds: 240),
-                          curve: Curves.linear,
+                          duration: const Duration(seconds: 1),
+                          curve: Curves.bounceOut,
                         );
                       });
                     } else {
@@ -239,7 +254,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   },
                   child: Container(
                     height: 48.h,
-                    width: pageIndex!=2?90.w:150.w,
+                    width: pageIndex != 2 ? 90.w : 150.w,
                     decoration: BoxDecoration(
                       shape: BoxShape.rectangle,
                       color: AppColors.C_8875FF,
@@ -247,7 +262,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     ),
                     child: Center(
                       child: Text(
-                        pageIndex!=2?tr("next"):tr("get_started"),
+                        pageIndex != 2 ? tr("next") : tr("get_started"),
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontFamily: "Lato",

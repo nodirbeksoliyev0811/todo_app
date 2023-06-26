@@ -26,7 +26,6 @@ class SplashScreen extends StatelessWidget {
                 SvgPicture.asset(AppIcons.logo,height: 113.h,width: 113.w,),
                 SizedBox(height: 19.h,),
                 Text("UpTodo",style: TextStyle(fontWeight: FontWeight.w700,fontSize: 40.sp,fontFamily: "Lato",color: AppColors.white),),
-
               ],
             ),
           )
