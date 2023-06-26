@@ -4,16 +4,17 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../utils/images.dart';
 
 class PageViewItems extends StatelessWidget {
-  const PageViewItems({super.key, required this.title, required this.text});
+  const PageViewItems({super.key, required this.title, required this.text, required this.img});
   final String title;
   final String text;
+  final String img;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Image.asset(
-          AppImages.onBoarding1,
+          img,
           height: 277.78.sp,
           width: 213.w,
         ),
